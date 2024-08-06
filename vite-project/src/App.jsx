@@ -36,6 +36,8 @@ import { createContext } from 'react';
 // ThemeContext to cover the application 
 // ThemeContext is component that componet provide a provider component
 // pass pros
+
+
 export const ThemeContext = createContext();
 
 function App() {

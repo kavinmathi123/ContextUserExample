@@ -18,11 +18,18 @@
 
 import React from 'react'
 import User from './User'
+import { useContext } from 'react'
+import { ThemeContext } from './App'
 
 const Users = () => {
+    const { theme } = useContext(ThemeContext)
+    const UserStyele = {
+        backgroundColor: theme === "light" ? "white" : "black",
+        color: theme === "light" ? "pink" : "white"
+    }
     return (
         <div>
-            <h1>Users</h1>
+            <h1 style={UserStyele}>Users</h1>
             <User />
         </div>
     )
